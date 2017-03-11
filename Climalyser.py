@@ -1,9 +1,9 @@
-from time import sleep
-from datetime import datetime
+from time import sleep  #sleep functions
+from datetime import datetime #dates
 
 
-def climalyser():
-    print("REMEMBER: 1 = lowest 5 = highest ")
+def climalyser():  #full function
+    print("REMEMBER: 1 = lowest 5 = highest ")   #QUESTIONS
     eletric=(int(input("How much does your Consumer Eletronics use effect the Enviroment?")))
     sleep(1)
     heat=(int(input("How does your home heating e.g Coal, Turf, Briquettes, Gas use effect the Enviroment?")))
@@ -14,12 +14,12 @@ def climalyser():
     sleep(1)
     transport=(int(input("How does your vehicular transport and/or daily,weekly,monthly commuting/travelling affect your local enviroment")))
     sleep(1)
-    subtotal = eletric+heat+water+ecology+transport
-    total = subtotal/25
+    subtotal = eletric+heat+water+ecology+transport  #the basic equation
+    total = subtotal/25   #totals
     result = total*100
-    result = str(result)
+    result = str(result)  #integer to string
   
-    if result >= "60":
+    if result >= "60":   #Grade Results
         print("GOOD Quality")
 
     elif result <= "59":
@@ -28,11 +28,11 @@ def climalyser():
     else:
         print("ERROR")
 
-    save=["Climate Change in your Life:"]
+    save=["Climate Change in your Life:"]   #Saving a list - EXTRA
     save.append(result)
     print (save)
 
-    target1 = open('yourlocalclimate.txt', 'w')
+    target1 = open('yourlocalclimate.txt', 'w')   #writing text file to save to PC hard drive
 
     target1.write(result)
 
@@ -42,7 +42,7 @@ def climalyser():
     sleep(20)
     
 
-print("Welcome to 'Climalyser' the Local Climate Change Prediction Software")
+print("Welcome to 'Climalyser' the Local Climate Change Prediction Software")   #welcome and intro
 sleep(2)
 print("This software has been developed by Daniel O'Brien from Meteodeep")
 sleep(2)
@@ -52,7 +52,7 @@ print("We will be regularly updating the software with bug fixes and updates/imp
 sleep(2)
 print("ENJOY!! and be sure to contact us for feedback!")
 
-menu=input("Where would you like to go from here, 'Climalyser' or 'Website'")
+menu=input("Where would you like to go from here, 'Climalyser' or 'Website'")  #opening menu
 
 if menu == "Climalyser":
     climalyser()
