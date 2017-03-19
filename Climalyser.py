@@ -20,10 +20,10 @@ def climalyser():  #full function
     result = str(result)  #integer to string
   
     if result >= "60":   #Grade Results
-        print("GOOD Quality")
+        print("POOR Quality")
 
     elif result <= "59":
-        print("POOR Quality")
+        print("GOOD Quality")
 
     else:
         print("ERROR")
