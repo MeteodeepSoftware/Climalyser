@@ -4,25 +4,25 @@ from datetime import datetime #dates
 
 def climalyser():  #full function
     print("REMEMBER: 1 = lowest 5 = highest ")   #QUESTIONS
-    eletric=(int(input("How much does your Consumer Eletronics use effect the Enviroment?")))
+    eletric=(int(input("How much does your Consumer Eletronics use effect the Environment?")))
     sleep(1)
-    heat=(int(input("How does your home heating e.g Coal, Turf, Briquettes, Gas use effect the Enviroment?")))
+    heat=(int(input("How does your home heating e.g Coal, Turf, Briquettes, Gas use effect the Environment?")))
     sleep(1)
     water=(int(input("How much Water would you use on a daily basis for tasks, 1 being the lowest and 5 the highest?")))
     sleep(1)
     ecology=(int(input("How much has Ecology/Biodiversity/Zoology/Local Habitats/Native Animals/Native Plants been affected by Pollution in your area")))
     sleep(1)
-    transport=(int(input("How does your vehicular transport and/or daily,weekly,monthly commuting/travelling affect your local enviroment")))
+    transport=(int(input("How does your vehicular transport and/or daily,weekly,monthly commuting/travelling affect your local environment")))
     sleep(1)
     subtotal = eletric+heat+water+ecology+transport  #the basic equation
     total = subtotal/25   #totals
     result = total*100
     result = str(result)  #integer to string
   
-    if result >= "60":   #Grade Results
+    if result >= "80":   #Grade Results
         print("POOR Quality")
 
-    elif result <= "59":
+    elif result <= "79":
         print("GOOD Quality")
 
     else:
